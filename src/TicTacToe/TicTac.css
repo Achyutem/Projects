@@ -1,0 +1,58 @@
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stats{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .blocks{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .board{
+    display: flex;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .row-1{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row-2{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row-3{
+    display: flex;
+    flex-direction: column;
+  }
+
+h3{
+  margin-bottom: 0;
+  color: rgb(185, 14, 108);
+}
+
+h4{
+  margin-bottom: 0;
+}
+
+body{
+  background-color: rgb(216, 206, 194);
+}
