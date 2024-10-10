@@ -1,0 +1,34 @@
+.stack{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.block{
+    background-color: antiquewhite;
+    width: 500px;
+    margin-bottom: 10px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.open{
+    max-height: 200px;
+    padding: 10px;
+}
+
+.hold, .contain{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: cadetblue;
+    cursor: pointer;
+}
