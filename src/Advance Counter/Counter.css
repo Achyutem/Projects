@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider, .increment, .upper-limit, .lower-limit, .button, .async {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.slider, .button, .async{
+    padding: 10px;
+}
+
+input {
+    width: 150px;
+    height: 30px;
+}
