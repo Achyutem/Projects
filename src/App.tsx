@@ -1,10 +1,18 @@
-import TicToe from "./TicTacToe/TicToe"
+// import TicToe from "./TicTacToe/TicToe"
+// import Accordion from "./Accordion/Accordion"
+// import Counter from "./Advance Counter/Counter"
+
+import Translator from "./Translator/Translator"
+
 
 function App() {
   return (
     <>
-    <div className="game">
-      <TicToe />
+    <div>
+      {/* <TicToe /> */}
+      {/* <Accordion /> */}
+      {/* <Counter/> */}
+      <Translator />
     </div>
     </>
   )
