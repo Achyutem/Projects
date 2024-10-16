@@ -1,8 +1,8 @@
 // import TicToe from "./TicTacToe/TicToe"
 // import Accordion from "./Accordion/Accordion"
 // import Counter from "./Advance Counter/Counter"
-
-import Translator from "./Translator/Translator"
+// import Translator from "./Translator/Translator"
+import NestedCheckbox from "./NestedCheckbox/NestedCheckbox"
 
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
       {/* <TicToe /> */}
       {/* <Accordion /> */}
       {/* <Counter/> */}
-      <Translator />
+      {/* <Translator /> */}
+      <NestedCheckbox />
     </div>
     </>
   )
