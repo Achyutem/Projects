@@ -2,7 +2,9 @@
 // import Accordion from "./Accordion/Accordion"
 // import Counter from "./Advance Counter/Counter"
 // import Translator from "./Translator/Translator"
-import NestedCheckbox from "./NestedCheckbox/NestedCheckbox"
+// import NestedCheckbox from "./NestedCheckbox/NestedCheckbox"
+
+import Otp from "./OTP/Otp"
 
 
 function App() {
@@ -13,7 +15,8 @@ function App() {
       {/* <Accordion /> */}
       {/* <Counter/> */}
       {/* <Translator /> */}
-      <NestedCheckbox />
+      {/* <NestedCheckbox /> */}
+      <Otp />
     </div>
     </>
   )
