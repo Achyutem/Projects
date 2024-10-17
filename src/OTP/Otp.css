@@ -1,0 +1,17 @@
+input {
+    border: 2px solid black;
+    outline: none;
+    font-size: inherit;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background: transparent;
+    padding: 0; 
+}
+
+.stack {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
