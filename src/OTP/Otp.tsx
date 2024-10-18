@@ -18,11 +18,12 @@ const Otp = () => {
     index: number,
     e: React.KeyboardEvent<HTMLInputElement>
   ) => {
+    const isAlphanumeric = /^[a-zA-Z0-9]$/.test(e.key)
     if (e.key === "Backspace" && !value[index] && index > 0) {
       const prevInput = document.getElementById(`otp-input-${index - 1}`);
       prevInput?.focus();
     } else if (
-      e.key !== "Backspace" &&
+      isAlphanumeric &&
       value[index].length === 1 &&
       index < value.length - 1
     ) {
