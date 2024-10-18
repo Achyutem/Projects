@@ -4,7 +4,8 @@
 // import Translator from "./Translator/Translator"
 // import NestedCheckbox from "./NestedCheckbox/NestedCheckbox"
 // import Otp from "./OTP/Otp"
-import Stars from "./Stars/Stars"
+// import Stars from "./Stars/Stars"
+import Stopwatch from "./Stopwatch/Stopwatch"
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       {/* <Translator /> */}
       {/* <NestedCheckbox /> */}
       {/* <Otp /> */}
-       <Stars />
+      {/* <Stars /> */}
+      <Stopwatch />
     </div>
     </>
   )
