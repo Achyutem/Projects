@@ -3,8 +3,8 @@
 // import Counter from "./Advance Counter/Counter"
 // import Translator from "./Translator/Translator"
 // import NestedCheckbox from "./NestedCheckbox/NestedCheckbox"
-
-import Otp from "./OTP/Otp"
+// import Otp from "./OTP/Otp"
+import Stars from "./Stars/Stars"
 
 
 function App() {
@@ -16,7 +16,8 @@ function App() {
       {/* <Counter/> */}
       {/* <Translator /> */}
       {/* <NestedCheckbox /> */}
-      <Otp />
+      {/* <Otp /> */}
+       <Stars />
     </div>
     </>
   )
