@@ -6,7 +6,9 @@
 // import Otp from "./OTP/Otp"
 // import Stars from "./Stars/Stars"
 // import Stopwatch from "./Stopwatch/Stopwatch"
-import Todo from "./TODO/Todo";
+// import ListTable from "./ListTable/ListTable";
+// import Todo from "./TODO/Todo";
+import Search from "./Search/Search";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         {/* <Otp /> */}
         {/* <Stars /> */}
         {/* <Stopwatch /> */}
-        <Todo />
+        {/* <Todo /> */}
+        {/* <ListTable /> */}
+        <Search />
       </div>
     </>
   );
