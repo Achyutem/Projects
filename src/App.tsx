@@ -8,7 +8,8 @@
 // import Stopwatch from "./Stopwatch/Stopwatch"
 // import ListTable from "./ListTable/ListTable";
 // import Todo from "./TODO/Todo";
-import Search from "./Search/Search";
+// import Search from "./Search/Search";
+import Form from './Form/Form.tsx';
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
         {/* <Stopwatch /> */}
         {/* <Todo /> */}
         {/* <ListTable /> */}
-        <Search />
-      </div>
+        {/* <Search /> */}
+        <Form />
+      // </div>
     </>
   );
 }
