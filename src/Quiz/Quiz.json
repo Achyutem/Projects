@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "options": ["Berlin", "Madrid", "Paris", "Rome"],
+    "answer": "Paris"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the largest mammal in the world?",
+    "options": ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+    "answer": "Blue Whale"
+  },
+  {
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": ["Charles Dickens", "William Shakespeare", "Leo Tolstoy", "Mark Twain"],
+    "answer": "William Shakespeare"
+  },
+  {
+    "question": "What is the smallest prime number?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "2"
+  },
+  {
+    "question": "Which element has the chemical symbol 'O'?",
+    "options": ["Oxygen", "Gold", "Osmium", "Oganesson"],
+    "answer": "Oxygen"
+  },
+  {
+    "question": "How many continents are there on Earth?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
+  },
+  {
+    "question": "What is the main ingredient in guacamole?",
+    "options": ["Tomato", "Cucumber", "Avocado", "Lettuce"],
+    "answer": "Avocado"
+  },
+  {
+    "question": "Which is the longest river in the world?",
+    "options": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+    "answer": "Nile"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+    "answer": "Leonardo da Vinci"
+  }
+]
