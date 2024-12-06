@@ -48,5 +48,55 @@
     "question": "Who painted the Mona Lisa?",
     "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
     "answer": "Leonardo da Vinci"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "options": ["Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Pacific Ocean"],
+    "answer": "Pacific Ocean"
+  },
+  {
+    "question": "Which country is the largest by land area?",
+    "options": ["Canada", "Russia", "China", "United States"],
+    "answer": "Russia"
+  },
+  {
+    "question": "Which animal is known for its black and white stripes?",
+    "options": ["Giraffe", "Lion", "Zebra", "Elephant"],
+    "answer": "Zebra"
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "options": ["Beijing", "Seoul", "Tokyo", "Hanoi"],
+    "answer": "Tokyo"
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Niels Bohr"],
+    "answer": "Albert Einstein"
+  },
+  {
+    "question": "Which bird is known for its ability to mimic human speech?",
+    "options": ["Parrot", "Eagle", "Penguin", "Sparrow"],
+    "answer": "Parrot"
+  },
+  {
+    "question": "Which continent is the Sahara Desert located on?",
+    "options": ["Asia", "Africa", "Australia", "North America"],
+    "answer": "Africa"
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "options": ["90°C", "95°C", "100°C", "105°C"],
+    "answer": "100°C"
+  },
+  {
+    "question": "Which country invented pizza?",
+    "options": ["Greece", "Italy", "France", "United States"],
+    "answer": "Italy"
+  },
+  {
+    "question": "What is the largest species of shark?",
+    "options": ["Great White Shark", "Whale Shark", "Tiger Shark", "Hammerhead Shark"],
+    "answer": "Whale Shark"
   }
 ]
