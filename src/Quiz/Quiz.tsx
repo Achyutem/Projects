@@ -3,7 +3,7 @@ import "./Quiz.css";
 import { useState } from "react";
 
 const Quiz = () => {
-  const limitedData = data.slice(0, 10);
+  // const limitedData = data.slice(0, 10);
   const [result, setResult] = useState({ correct: 0, incorrect: 0 });
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(
     new Set()
@@ -19,13 +19,13 @@ const Quiz = () => {
     }
 
     if (selectedOption === correctAnswer) {
-      alert("Correct!");
+      // alert("Correct!");
       setResult((prevRes) => ({
         ...prevRes,
         correct: prevRes.correct + 1,
       }));
     } else {
-      alert("Incorrect! Try again.");
+      // alert("Incorrect! Try again.");
       setResult((prevRes) => ({
         ...prevRes,
         incorrect: prevRes.incorrect + 1,
@@ -37,7 +37,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      {limitedData.map((dt, index) => (
+      {data.map((dt, index) => (
         <div
           className="quiz-item"
           key={index}>
