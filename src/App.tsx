@@ -10,8 +10,10 @@
 // import Todo from "./TODO/Todo";
 // import Search from "./Search/Search";
 // import Form from './Form/Form.tsx';
-import Quiz from "./Quiz/Quiz";
+// import Quiz from "./Quiz/Quiz";
 // import DiceRoller from "./DiceRoller/DiceRoller";
+
+import Pagination from "./Pagination/Pagination";
 
 function App() {
   return (
@@ -29,8 +31,9 @@ function App() {
         {/* <ListTable /> */}
         {/* <Search /> */}
         {/* <Form /> */}
-        <Quiz />
+        {/* <Quiz /> */}
         {/* <DiceRoller /> */}
+        <Pagination />
       </div>
     </>
   );
