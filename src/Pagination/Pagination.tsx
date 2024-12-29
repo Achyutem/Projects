@@ -5,6 +5,7 @@ function Pagination() {
   const [data, setData] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState<number>(1);
+  const [hasMore, setHasMore] = useState<boolean>(true);
   const limit = 10;
 
   useEffect(() => {
@@ -19,26 +20,31 @@ function Pagination() {
           const url = `https://jsonplaceholder.typicode.com/todos/${count}`;
           const res = await fetch(url);
           if (!res.ok) {
+            if (res.status === 404) {
+              if (results.length === 0) {
+                setPage(prevPage => prevPage - 1);
+              }
+              setHasMore(false);
+              break;
+            }
             throw new Error("Can't fetch the URL");
           }
           const json = await res.json();
           results.push(json.title);
         }
-        if (page === 1) {
-          setData(results);
-        } else {
-          setData(() => [...results]);
-        }
-      } catch (err: any) {
+        setData(results);
+        setHasMore(results.length === limit);
+      } catch (err: undefined | string) {
         setError(err.message || "An error occurred");
       }
     }
-
     fetchData();
   }, [page]);
 
   const fetchNextPage = () => {
-    setPage((prevPage) => prevPage + 1);
+    if (hasMore) {
+      setPage((prevPage) => prevPage + 1);
+    }
   };
 
   const fetchPrevPage = () => {
@@ -63,11 +69,17 @@ function Pagination() {
       <div className="footer">
         <button
           onClick={fetchPrevPage}
-          disabled={page === 1}>
-          Less
+          disabled={page === 1}
+        >
+          prev
         </button>
         <p>{page}</p>
-        <button onClick={fetchNextPage}>More</button>
+        <button 
+          onClick={fetchNextPage}
+          disabled={!hasMore}
+        >
+          next
+        </button>
       </div>
     </div>
   );
