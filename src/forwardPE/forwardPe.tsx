@@ -164,6 +164,13 @@ const App: React.FC = () => {
               <p className="text-gray-800">
                 <strong>Forward P/E:</strong> {forwardPe.toFixed(2)}
               </p>
+              <a
+                href={`https://www.screener.in/company/${ticker}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 underline hover:text-indigo-800">
+                View {ticker} on Screener
+              </a>
             </div>
           )}
         </div>
