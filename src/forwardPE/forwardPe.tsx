@@ -12,6 +12,7 @@ const App: React.FC = () => {
   const [cmp, setCmp] = useState<string>("");
   const [forwardPe, setForwardPe] = useState<number | null>(null);
   const [forwardEps, setForwardEps] = useState<number | null>(null);
+  const [showInputs, setShowInputs] = useState<boolean>(true);
 
   const calculateForwardPE = () => {
     const estimatedRevenue =
@@ -25,110 +26,125 @@ const App: React.FC = () => {
 
     setForwardEps(eps);
     setForwardPe(forwardPE);
+    setShowInputs(false);
   };
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-3xl font-semibold text-center text-indigo-600 mb-8">
+        <h1 className="text-3xl font-bold text-center text-indigo-600 mb-8">
           Forward P/E Calculator
         </h1>
-        <div className="space-y-6">
-          <div>
-            <label className="block text-gray-700">Company Ticker (NSE):</label>
-            <input
-              type="text"
-              value={ticker}
-              onChange={(e) => setTicker(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">Current P/E:</label>
-            <input
-              type="number"
-              value={peRatio}
-              onChange={(e) => setPeRatio(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">
-              Current Revenue (INR in Crs):
-            </label>
-            <input
-              type="number"
-              value={currentRevenue}
-              onChange={(e) => setCurrentRevenue(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">
-              Estimated Revenue Growth (%):
-            </label>
-            <input
-              type="number"
-              value={revenueGrowth}
-              onChange={(e) => setRevenueGrowth(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">EBITDA Margin (%):</label>
-            <input
-              type="number"
-              value={ebitdaMargin}
-              onChange={(e) => setEbitdaMargin(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">Interest Cost (INR):</label>
-            <input
-              type="number"
-              value={interestCost}
-              onChange={(e) => setInterestCost(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">PAT Margin (%):</label>
-            <input
-              type="number"
-              value={patMargin}
-              onChange={(e) => setPatMargin(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">
-              No. of Total Shares (in Crs):
-            </label>
-            <input
-              type="number"
-              value={sharesOutstanding}
-              onChange={(e) => setSharesOutstanding(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700">CMP (INR):</label>
-            <input
-              type="number"
-              value={cmp}
-              onChange={(e) => setCmp(e.target.value)}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
+        {showInputs ? (
+          <div className="space-y-6">
+            <div>
+              <label className="block text-gray-700 font-bold">
+                Company Ticker (NSE):
+              </label>
+              <input
+                type="text"
+                value={ticker}
+                onChange={(e) => setTicker(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                Current P/E:
+              </label>
+              <input
+                type="number"
+                value={peRatio}
+                onChange={(e) => setPeRatio(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                Current Revenue (INR in Crs):
+              </label>
+              <input
+                type="number"
+                value={currentRevenue}
+                onChange={(e) => setCurrentRevenue(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                Estimated Revenue Growth (%):
+              </label>
+              <input
+                type="number"
+                value={revenueGrowth}
+                onChange={(e) => setRevenueGrowth(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                EBITDA Margin (%):
+              </label>
+              <input
+                type="number"
+                value={ebitdaMargin}
+                onChange={(e) => setEbitdaMargin(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                Interest Cost (INR):
+              </label>
+              <input
+                type="number"
+                value={interestCost}
+                onChange={(e) => setInterestCost(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                PAT Margin (%):
+              </label>
+              <input
+                type="number"
+                value={patMargin}
+                onChange={(e) => setPatMargin(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                No. of Total Shares (in Crs):
+              </label>
+              <input
+                type="number"
+                value={sharesOutstanding}
+                onChange={(e) => setSharesOutstanding(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                CMP (INR):
+              </label>
+              <input
+                type="number"
+                value={cmp}
+                onChange={(e) => setCmp(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-          <button
-            onClick={calculateForwardPE}
-            className="w-full py-3 mt-6 bg-indigo-600 text-white font-semibold rounded-lg focus:outline-none hover:bg-indigo-700">
-            Calculate Forward P/E
-          </button>
-
-          {forwardPe !== null && forwardEps !== null && (
+            <button
+              onClick={calculateForwardPE}
+              className="w-full py-3 mt-6 bg-indigo-600 text-white font-semibold rounded-lg focus:outline-none hover:bg-indigo-700">
+              Calculate Forward P/E
+            </button>
+          </div>
+        ) : (
+          <div>
             <div className="mt-8 bg-indigo-50 p-6 rounded-lg shadow-md">
               <h2 className="text-2xl font-bold text-indigo-600 mb-4">
                 Results for {ticker}
@@ -159,21 +175,37 @@ const App: React.FC = () => {
                 <strong>CMP:</strong> ₹{cmp}
               </p>
               <p className="text-gray-800">
-                <strong>Forward EPS:</strong> ₹{forwardEps.toFixed(2)}
+                <strong>Forward EPS:</strong> ₹{forwardEps?.toFixed(2)}
               </p>
               <p className="text-gray-800">
-                <strong>Forward P/E:</strong> {forwardPe.toFixed(2)}
+                <strong>Forward P/E:</strong> {forwardPe?.toFixed(2)}
               </p>
-              <a
-                href={`https://www.screener.in/company/${ticker}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 underline hover:text-indigo-800">
-                View {ticker} on Screener
-              </a>
+              <p>
+                <a
+                  href={`https://www.screener.in/company/${ticker}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 underline hover:text-indigo-800">
+                  View {ticker} on Screener
+                </a>
+              </p>
+              <p>
+                <a
+                  href={`https://www.tradingview.com/chart/?symbol=NSE%3A${ticker}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 underline hover:text-indigo-800">
+                  View {ticker} on TradingView
+                </a>
+              </p>
             </div>
-          )}
-        </div>
+            <button
+              onClick={() => setShowInputs(true)}
+              className="w-full py-3 mt-6 bg-indigo-600 text-white font-semibold rounded-lg focus:outline-none hover:bg-indigo-700">
+              Edit Values
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
