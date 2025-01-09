@@ -13,6 +13,8 @@ const App: React.FC = () => {
   const [forwardPe, setForwardPe] = useState<number | null>(null);
   const [forwardEps, setForwardEps] = useState<number | null>(null);
   const [showInputs, setShowInputs] = useState<boolean>(true);
+  const [earningsGrowthRate, setEarningsGrowthRate] = useState<string>("");
+  const [pegRatio, setPegRatio] = useState<number | null>(null);
 
   const calculateForwardPE = () => {
     const estimatedRevenue =
@@ -23,9 +25,12 @@ const App: React.FC = () => {
     const pat = adjustedEbitda * (parseFloat(patMargin || "0") / 100);
     const eps = pat / parseFloat(sharesOutstanding || "0");
     const forwardPE = parseFloat(cmp || "0") / eps;
+    const growthRate = parseFloat(earningsGrowthRate || "0");
+    const pegRatio = growthRate > 0 ? forwardPE / growthRate : null;
 
     setForwardEps(eps);
     setForwardPe(forwardPE);
+    setPegRatio(pegRatio);
     setShowInputs(false);
   };
 
@@ -92,6 +97,18 @@ const App: React.FC = () => {
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
+            <div>
+              <label className="block text-gray-700 font-bold">
+                Estimated Earnings Growth Rate (%):
+              </label>
+              <input
+                type="number"
+                value={earningsGrowthRate}
+                onChange={(e) => setEarningsGrowthRate(e.target.value)}
+                className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+
             <div>
               <label className="block text-gray-700 font-bold">
                 Interest Cost (INR):
@@ -179,6 +196,10 @@ const App: React.FC = () => {
               </p>
               <p className="text-gray-800">
                 <strong>Forward P/E:</strong> {forwardPe?.toFixed(2)}
+              </p>
+              <p className="text-gray-800">
+                <strong>PEG Ratio:</strong>{" "}
+                {pegRatio !== null ? pegRatio.toFixed(2) : "N/A"}
               </p>
               <p>
                 <a
