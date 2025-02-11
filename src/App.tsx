@@ -12,8 +12,10 @@
 // import Form from './Form/Form.tsx';
 // import Quiz from "./Quiz/Quiz";
 // import DiceRoller from "./DiceRoller/DiceRoller";
-import ForwardPe from "./forwardPE/forwardPe";
+// import ForwardPe from "./forwardPE/forwardPe";
 // import Pagination from "./Pagination/Pagination";
+
+import Pomodoro from "./Pomodoro/Pomodoro";
 
 function App() {
   return (
@@ -34,7 +36,8 @@ function App() {
         {/* <Quiz /> */}
         {/* <DiceRoller /> */}
         {/* <Pagination /> */}
-        <ForwardPe />
+        {/* <ForwardPe /> */}
+        <Pomodoro />
       </div>
     </>
   );
